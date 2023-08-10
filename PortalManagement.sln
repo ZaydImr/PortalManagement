@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34004.107
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FrontEnd", "FrontEnd", "{4F5FA0F6-11A7-40E0-B796-FDA4A61F39BB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Gateway", "Gateway", "{15F65722-B530-4892-8750-4CFB4C5159F3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration", "{AF2F2BBA-1518-4C5C-8794-D25090B12249}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{29DE743B-6AEF-46A6-9B74-B625F9C904E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal.Services.HRAPI", "Portail.Services.HRAPI\Portal.Services.HRAPI.csproj", "{EA2AC50C-A6FE-4A66-80FB-CAD4073D0194}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA2AC50C-A6FE-4A66-80FB-CAD4073D0194}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA2AC50C-A6FE-4A66-80FB-CAD4073D0194}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA2AC50C-A6FE-4A66-80FB-CAD4073D0194}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA2AC50C-A6FE-4A66-80FB-CAD4073D0194}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EA2AC50C-A6FE-4A66-80FB-CAD4073D0194} = {29DE743B-6AEF-46A6-9B74-B625F9C904E3}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {424B012A-A82A-4CC0-AB54-9FEEA21221D4}
+	EndGlobalSection
+EndGlobal
