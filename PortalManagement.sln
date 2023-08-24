@@ -11,7 +11,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Integration", "Integration"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{29DE743B-6AEF-46A6-9B74-B625F9C904E3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal.Services.HRAPI", "Portail.Services.HRAPI\Portal.Services.HRAPI.csproj", "{EA2AC50C-A6FE-4A66-80FB-CAD4073D0194}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Portal.Services.DataAPI", "Portail.Services.HRAPI\Portal.Services.DataAPI.csproj", "{EA2AC50C-A6FE-4A66-80FB-CAD4073D0194}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{335088D7-273B-4149-9245-D76CAFFAB374}"
+	ProjectSection(SolutionItems) = preProject
+		ef.txt = ef.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
