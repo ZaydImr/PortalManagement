@@ -1,25 +1,21 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { DepartmentService } from './services/department.service';
+import { Department } from './models/Department';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
 export class AppComponent {
-  public forecasts?: WeatherForecast[];
+  
+  title = 'portalweb.client';
+  public departments?: Department[];
 
-  constructor(http: HttpClient) {
-    // http.get<WeatherForecast[]>('/weatherforecast').subscribe(result => {
-    //   this.forecasts = result;
-    // }, error => console.error(error));
+  constructor(departmentServ : DepartmentService) {
+    departmentServ.getAll().subscribe(result => {
+      this.departments = result;
+    }, error => console.error(error));
   }
 
-  title = 'portalweb.client';
-}
-
-interface WeatherForecast {
-  date: string;
-  temperatureC: number;
-  temperatureF: number;
-  summary: string;
 }

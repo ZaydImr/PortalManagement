@@ -6,14 +6,15 @@ import { AppComponent } from './app.component';
 import { LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { TokenInterceptor } from './configurations/token.interceptor';
 import { AppRoutingModule } from './app-routing.module';
-import { LayoutComponent } from './layout/layout.component';
 
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, AppRoutingModule
+    BrowserModule, 
+    HttpClientModule, 
+    AppRoutingModule
   ],
   providers: [
     {

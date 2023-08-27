@@ -23,7 +23,7 @@ public class DepartmentController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAsync()
+    public async Task<IActionResult> GetAll()
     {
         try
         {
@@ -42,7 +42,7 @@ public class DepartmentController : ControllerBase
 
     [HttpGet]
     [Route("{Id:int}")]
-    public async Task<IActionResult> GetAsync(int Id)
+    public async Task<IActionResult> GetById(int Id)
     {
         try
         {
@@ -100,6 +100,7 @@ public class DepartmentController : ControllerBase
     }
 
     [HttpDelete]
+    [Route("{Id:int}")]
     public async Task<IActionResult> Delete(int Id)
     {
         try
