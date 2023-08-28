@@ -18,7 +18,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		ef.txt = ef.txt
 	EndProjectSection
 EndProject
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "Portal.Client", "Portal.Client\portal.client.esproj", "{33CFA8FB-E609-4247-82F8-470B4463E28B}"
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "portal.client", "Portal.Client\portal.client.esproj", "{33CFA8FB-E609-4247-82F8-470B4463E28B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Portal.Services.AuthAPI", "Portal.Services.AuthAPI\Portal.Services.AuthAPI.csproj", "{8A096B2F-B745-4A6E-A26C-9B0F51F10D05}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -36,6 +38,10 @@ Global
 		{33CFA8FB-E609-4247-82F8-470B4463E28B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33CFA8FB-E609-4247-82F8-470B4463E28B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{33CFA8FB-E609-4247-82F8-470B4463E28B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{8A096B2F-B745-4A6E-A26C-9B0F51F10D05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A096B2F-B745-4A6E-A26C-9B0F51F10D05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A096B2F-B745-4A6E-A26C-9B0F51F10D05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A096B2F-B745-4A6E-A26C-9B0F51F10D05}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -43,6 +49,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{EA2AC50C-A6FE-4A66-80FB-CAD4073D0194} = {29DE743B-6AEF-46A6-9B74-B625F9C904E3}
 		{33CFA8FB-E609-4247-82F8-470B4463E28B} = {4F5FA0F6-11A7-40E0-B796-FDA4A61F39BB}
+		{8A096B2F-B745-4A6E-A26C-9B0F51F10D05} = {29DE743B-6AEF-46A6-9B74-B625F9C904E3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {424B012A-A82A-4CC0-AB54-9FEEA21221D4}
