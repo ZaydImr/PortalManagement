@@ -2,19 +2,30 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Portal.Services.AuthAPI.Data;
 using Portal.Services.AuthAPI.Model;
+using Portal.Services.AuthAPI.Service;
+using Portal.Services.AuthAPI.Service.IService;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add connection string
+/*  Dependency Injection  */
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
+
+/*  Connection String Configuration  */
 builder.Services.AddDbContext<AppDbContext>(option =>
 {
     option.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
+
+/*  JWT Configuration  */
+builder.Services.Configure<JwtOptions>(builder.Configuration.GetSection("ApiSettings:JwtOptions"));
+
+/*  EntityFramework Identity Configuration  */
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 
-// Add AutoMapper configuration
+/*  AutoMapper configuration   */
 //builder.Services.AddSingleton(MappingConfig.RegisterMaps().CreateMapper());
 //builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
@@ -37,7 +48,9 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
+
 ApplyMigration();
+
 app.Run();
 
 void ApplyMigration()
