@@ -1,13 +1,13 @@
 import { HttpHandlerFn, HttpRequest } from "@angular/common/http";
 import { inject } from "@angular/core";
-import { TokenStorageService } from "../services/token-storage.service";
+import { TokenService } from "../services/token.service";
 
 export function TokenInterceptor(request: HttpRequest<unknown>, next: HttpHandlerFn) {
-    const tokenService = inject(TokenStorageService);
+    const tokenService = inject(TokenService);
     let user = tokenService.getUser();
     const clonedRequest = request.clone({
         setHeaders: {
-            Authorization: `${user?.type} ${user?.accessToken}`
+            Authorization: `Bearer ${user?.token}`
         }
     });
     return next(clonedRequest).pipe()

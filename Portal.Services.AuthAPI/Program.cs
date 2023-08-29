@@ -1,9 +1,12 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using Portal.Services.AuthAPI.Data;
 using Portal.Services.AuthAPI.Model;
 using Portal.Services.AuthAPI.Service;
 using Portal.Services.AuthAPI.Service.IService;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 

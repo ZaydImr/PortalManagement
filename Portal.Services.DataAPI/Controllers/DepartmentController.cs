@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Portal.Services.DataAPI.Data;
@@ -9,6 +10,7 @@ namespace Portal.Services.DataAPI.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[Authorize]
 public class DepartmentController : ControllerBase
 {
     private readonly ILogger<DepartmentController> _logger;
